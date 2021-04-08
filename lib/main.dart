@@ -25,6 +25,8 @@ class MyApp extends StatelessWidget {
         "/login" : (context) => Login(),
         "/rHome" : (context) => HomePage(),
       },
-    ));
+      debugShowCheckedModeBanner: false,
+    ),
+    );
   }
 }

@@ -185,7 +185,22 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                             SizedBox(
-                              height: MediaQuery.of(context).size.height / 50,
+                              height: (MediaQuery.of(context).size.height / 50)*.8,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Container(
+                                  child: Text(sProvider.selector == 0? 'All transactions':sProvider.selector == 1?'Spend in Last 7 Days': 'Spend in Last Month',
+                                  style: TextStyle(
+                                    fontSize: 10
+                                  ),),
+                                  margin: EdgeInsets.only(right: 10),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: (MediaQuery.of(context).size.height / 50)*.2,
                             ),
                           ],
                         ),
@@ -282,7 +297,7 @@ class _HomePageState extends State<HomePage> {
                       BorderRadius.vertical(top: Radius.circular(8.0))),
                   isScrollControlled: true,
                   builder: (context) => Container(
-                    padding: MediaQuery.of(context).viewInsets,
+                    //padding: MediaQuery.of(context).viewInsets,
                     child: Form(
                       key: formkey,
                       child: Column(
