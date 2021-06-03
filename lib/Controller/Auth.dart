@@ -31,7 +31,7 @@ class Auth extends ChangeNotifier{
     final SharedPreferences pref = await SharedPreferences.getInstance();
     Map credential = {"email": email, "password": pass};
     await post(
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAXcHBIHO2ebdl2dv2eCchpvEvqjpCEiuc",
+        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=KEY_REMOVED",
         body: credential
     ).catchError((e){
       if(email == null || pass == null){
@@ -56,7 +56,7 @@ class Auth extends ChangeNotifier{
     final SharedPreferences pref = await SharedPreferences.getInstance();
     Map credentials = {"email": email, "password": pass};
     await post(
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAXcHBIHO2ebdl2dv2eCchpvEvqjpCEiuc",
+        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=KEY_REMOVED",
         body: credentials
     ).catchError((e){
       rerrorstr(e.toString());
